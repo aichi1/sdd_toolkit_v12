@@ -1,0 +1,18 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Windows security zone metadata (from downloads)
+*:Zone.Identifier
+*Zone.Identifier
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# SDD 実行時の生成物（spec-kit 本体には含めない）
+/outputs/
+/.steering/
+/metadata.json
