@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "python3 .github/hooks/session-start-info.py",
+        "cwd": ".",
+        "timeoutSec": 10
+      }
+    ],
+    "preToolUse": [
+      {
+        "type": "command",
+        "bash": "python3 .github/hooks/check-docs-exist.py",
+        "cwd": ".",
+        "timeoutSec": 10
+      }
+    ],
+    "postToolUse": [
+      {
+        "type": "command",
+        "bash": "bash .github/hooks/post-phase-complete.sh .",
+        "cwd": ".",
+        "timeoutSec": 60
+      }
+    ],
+    "sessionEnd": [
+      {
+        "type": "command",
+        "bash": "python3 .github/hooks/remind-finalize.py",
+        "cwd": ".",
+        "timeoutSec": 10
+      }
+    ]
+  }
+}

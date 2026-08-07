@@ -1,0 +1,13 @@
+{
+  "//": "Copilot CLI 用の MCP サーバー設定の雛形。使う場合は .github/mcp.json にリネームしてください。",
+  "//2": "本 spec-kit のコマンドは MCP に依存しないため、この設定は任意です。",
+  "//3": "scripts/mcp_server/ は名前に反して FastAPI の REST API であり MCP サーバーではありません。ここには登録できません（docs/copilot-setup.md 参照）。",
+  "mcpServers": {
+    "example-filesystem": {
+      "type": "local",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+      "tools": ["*"]
+    }
+  }
+}
